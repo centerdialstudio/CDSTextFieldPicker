@@ -19,7 +19,8 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
     self = [super initWithCoder:aDecoder];
     if (self) {
         // load picker
@@ -28,7 +29,8 @@
     return self;
 }
 
-- (void)initializePicker {
+- (void)initializePicker
+{
     CGRect pickerFrame;
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
         pickerFrame = CGRectMake(0, 740, 768, 264);
