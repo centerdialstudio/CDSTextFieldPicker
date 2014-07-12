@@ -31,6 +31,8 @@
 @property (nonatomic, strong) UIToolbar *pickerToolbar;
 /// Toolbar button
 @property (nonatomic, strong) UIBarButtonItem *toolbarButton;
+/// Selected row
+@property NSInteger selectedIndex;
 
 - (void)selectRow:(NSInteger)row;
 - (void)selectRow:(NSInteger)row inComponent:(NSInteger)component animated:(BOOL)animated;

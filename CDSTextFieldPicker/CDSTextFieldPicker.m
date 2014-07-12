@@ -58,12 +58,14 @@
     
     self.inputView = _picker;
     self.inputAccessoryView = _pickerToolbar;
+    
+    _selectedIndex = 0;
 }
 
 #pragma mark - CDSTextFieldPicker Delegate Methods
 - (void)pickerToolbarButtonPressed:(id)sender
 {
-    [_textFieldPickerDelegate pickerToolbarButtonPressed:sender];
+    [_textFieldPickerDelegate pickerToolbarButtonPressed:self];
 }
 
 
@@ -81,6 +83,7 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     [_textFieldPickerDelegate textField:self didSelectRow:row inComponent:component];
+    _selectedIndex = row;
     self.text = [self pickerView:pickerView titleForRow:row forComponent:component];
 }
 
@@ -98,6 +101,7 @@
 - (void)selectRow:(NSInteger)row inComponent:(NSInteger)component animated:(BOOL)animated
 {
     [_picker selectRow:row inComponent:component animated:animated];
+    _selectedIndex = row;
     self.text = [_textFieldPickerDelegate textField:self titleForRow:row forComponent:component];
 }
 
