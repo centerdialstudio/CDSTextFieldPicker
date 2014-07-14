@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CDSTextFieldPicker"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A UIPickerView replacement for the keyboard in a UITextField with toolbar"
   s.description  = "A custom UITextField that implements a UIPicker as its keyboard and allows for simple interaction."                
   s.homepage     = "https://github.com/centerdialstudio/CDSTextFieldPicker"

@@ -82,8 +82,8 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    [_textFieldPickerDelegate textField:self didSelectRow:row inComponent:component];
     _selectedIndex = row;
+    [_textFieldPickerDelegate textField:self didSelectRow:row inComponent:component];
     self.text = [self pickerView:pickerView titleForRow:row forComponent:component];
 }
 
